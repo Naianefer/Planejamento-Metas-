@@ -1,0 +1,253 @@
+/* === Estilos gerais === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff6f0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Cabeçalho === */
+header {
+  background-color: #0000ff;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* === Seções principais === */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  padding: 20px;
+}
+
+/* === Formulário === */
+#nova-meta h2 {
+  color: #fb6507;
+  margin-bottom: 10px;
+}
+
+#form-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#form-meta input,
+#form-meta select,
+#form-meta button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+#form-meta input[type="text"] {
+  flex: 2;
+  min-width: 150px;
+}
+
+#form-meta select,
+#form-meta input[type="date"] {
+  flex: 1;
+  min-width: 100px;
+}
+
+#form-meta button {
+  background-color: #fb6507;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  flex: 1;
+  min-width: 100px;
+}
+
+#form-meta button:hover {
+  background-color: #d95704;
+}
+
+/* === Lista de metas === */
+#lista-metas h2 {
+  color: #fb6507;
+  margin-bottom: 10px;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* === Metas === */
+#metas-lista {
+  list-style: none;
+}
+.meta-item {
+  background: #fffaf5;
+  border: 1px solid #ffd7be;
+  border-left: 6px solid #fb6507;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+  flex-wrap: nowrap; 
+}
+
+.meta-texto {
+  flex: 1; 
+  margin-right: 10px;
+  min-width: 0; 
+}
+
+.botoes {
+  display: flex;
+  gap: 6px; 
+  flex-shrink: 0; 
+}
+
+.meta-item.concluida {
+  background-color: #e0ffe3;
+  text-decoration: line-through;
+  color: #555;
+}
+
+.meta-item:hover {
+  background-color: #fff2e6;
+}
+
+/* === Texto da meta === */
+.meta-texto {
+  flex: 1 1 100%;
+  margin-right: 10px;
+}
+
+.meta-texto strong {
+  display: block;
+  margin-bottom: 6px; 
+}
+
+/* === Categorias (tags) === */
+.categoria-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Cores para cada categoria */
+.categoria-pessoal {
+  background-color: #ffe0f0;
+  color: #b00053;
+}
+
+.categoria-profissional {
+  background-color: #e0f0ff;
+  color: #004a8f;
+}
+
+.categoria-financeira {
+  background-color: #fff4cc;
+  color: #9c7a00;
+}
+
+.categoria-aprendizado {
+  background-color: #e7ffe0;
+  color: #2e7d32;
+}
+
+/* === Botões de ação === */
+.botoes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 6px;
+  transition: 0.2s;
+}
+
+.botoes button:hover {
+  color: #fb6507;
+}
+
+/* === Destaque das prioridades === */
+.prioridade-alta {
+  border-left: 6px solid #e63946 !important;
+  background-color: #ffe6e6;
+}
+
+.prioridade-media {
+  border-left: 6px solid #f9c74f !important;
+  background-color: #fff8e1;
+}
+
+.prioridade-baixa {
+  border-left: 6px solid #43aa8b !important;
+  background-color: #e6fff2;
+}
+
+/* === Rodapé === */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  background: #0000ff;
+  color: #fff;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .meta-texto {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+
+  .botoes {
+    margin-top: 8px;
+  }
+}

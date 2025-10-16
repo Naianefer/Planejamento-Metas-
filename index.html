@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Metas 2025</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="success.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>🎯 Minhas Metas 2026 🎯</h1>
+  </header>
+
+  <main>
+    <section id="nova-meta">
+      <h2>Adicionar Nova Meta</h2>
+      <form id="form-meta">
+        <input type="text" id="titulo" placeholder="Descreva sua meta..." required />
+        <select id="categoria">
+          <option value="">Categoria</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Profissional">Profissional</option>
+          <option value="Financeira">Financeira</option>
+          <option value="Aprendizado">Aprendizado</option>
+        </select>
+        <input type="date" id="prazo" />
+        <select id="prioridade">
+          <option value="">Prioridade</option>
+          <option value="Alta">Alta</option>
+          <option value="Média">Média</option>
+          <option value="Baixa">Baixa</option>
+        </select>
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section id="lista-metas">
+      <h2>📋 Minhas Metas</h2>
+      <div class="filtros">
+        <input type="text" id="buscar" placeholder="Pesquisar meta..." />
+        <select id="filtro-categoria">
+          <option value="">Todas categorias</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Profissional">Profissional</option>
+          <option value="Financeira">Financeira</option>
+          <option value="Aprendizado">Aprendizado</option>
+        </select>
+      </div>
+
+      <ul id="metas-lista"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feita pra Acompanhar as Metas 🫡 </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
